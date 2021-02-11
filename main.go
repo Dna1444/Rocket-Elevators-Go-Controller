@@ -22,32 +22,145 @@ func senario1() {
 
 	battery.columnsList[1].elevatorsList[0].currentFloor = 20
 	battery.columnsList[1].elevatorsList[0].status = "moving"
-	battery.columnsList[1].elevatorsList[0].direction = "Down"
+	battery.columnsList[1].elevatorsList[0].direction = "down"
 	battery.columnsList[1].elevatorsList[0].floorRequestList = append(battery.columnsList[1].elevatorsList[0].floorRequestList, 5)
 	battery.columnsList[1].elevatorsList[1].currentFloor = 3
 	battery.columnsList[1].elevatorsList[1].status = "moving"
-	battery.columnsList[1].elevatorsList[1].direction = "Up"
+	battery.columnsList[1].elevatorsList[1].direction = "up"
 	battery.columnsList[1].elevatorsList[1].floorRequestList = append(battery.columnsList[1].elevatorsList[1].floorRequestList, 15)
 	battery.columnsList[1].elevatorsList[2].currentFloor = 13
 	battery.columnsList[1].elevatorsList[2].status = "moving"
-	battery.columnsList[1].elevatorsList[2].direction = "Down"
+	battery.columnsList[1].elevatorsList[2].direction = "down"
 	battery.columnsList[1].elevatorsList[2].floorRequestList = append(battery.columnsList[1].elevatorsList[2].floorRequestList, 1)
 	battery.columnsList[1].elevatorsList[3].currentFloor = 15
 	battery.columnsList[1].elevatorsList[3].status = "moving"
-	battery.columnsList[1].elevatorsList[3].direction = "Down"
+	battery.columnsList[1].elevatorsList[3].direction = "down"
 	battery.columnsList[1].elevatorsList[3].floorRequestList = append(battery.columnsList[1].elevatorsList[3].floorRequestList, 2)
 	battery.columnsList[1].elevatorsList[4].currentFloor = 6
 	battery.columnsList[1].elevatorsList[4].status = "moving"
-	battery.columnsList[1].elevatorsList[4].direction = "Down"
+	battery.columnsList[1].elevatorsList[4].direction = "down"
 	battery.columnsList[1].elevatorsList[4].floorRequestList = append(battery.columnsList[1].elevatorsList[4].floorRequestList, 1)
 
-	battery.assignElevator(20, "Up")
+	battery.assignElevator(20, "up")
+
+}
+
+func senario2() {
+	battery := Battery{
+		ID:                         1,
+		status:                     "online",
+		amountOfColumns:            4,
+		amountOfFloors:             60,
+		amountOfBasements:          6,
+		amountOfElevatorsPerColumn: 5,
+		columnsList:                []Column{},
+		FloorRequestList:           []FloorRequestButton{},
+	}
+	battery.createFloorRequestbutton()
+	battery.createColumns()
+
+	battery.columnsList[2].elevatorsList[0].currentFloor = 1
+	battery.columnsList[2].elevatorsList[0].status = "idle"
+	battery.columnsList[2].elevatorsList[0].direction = "up"
+	battery.columnsList[2].elevatorsList[0].floorRequestList = append(battery.columnsList[2].elevatorsList[0].floorRequestList, 21)
+	battery.columnsList[2].elevatorsList[1].currentFloor = 21
+	battery.columnsList[2].elevatorsList[1].status = "moving"
+	battery.columnsList[2].elevatorsList[1].direction = "up"
+	battery.columnsList[2].elevatorsList[1].floorRequestList = append(battery.columnsList[2].elevatorsList[1].floorRequestList, 28)
+	battery.columnsList[2].elevatorsList[2].currentFloor = 33
+	battery.columnsList[2].elevatorsList[2].status = "moving"
+	battery.columnsList[2].elevatorsList[2].direction = "down"
+	battery.columnsList[2].elevatorsList[2].floorRequestList = append(battery.columnsList[2].elevatorsList[2].floorRequestList, 1)
+	battery.columnsList[2].elevatorsList[3].currentFloor = 40
+	battery.columnsList[2].elevatorsList[3].status = "moving"
+	battery.columnsList[2].elevatorsList[3].direction = "down"
+	battery.columnsList[2].elevatorsList[3].floorRequestList = append(battery.columnsList[2].elevatorsList[3].floorRequestList, 24)
+	battery.columnsList[2].elevatorsList[4].currentFloor = 39
+	battery.columnsList[2].elevatorsList[4].status = "moving"
+	battery.columnsList[2].elevatorsList[4].direction = "down"
+	battery.columnsList[2].elevatorsList[4].floorRequestList = append(battery.columnsList[2].elevatorsList[4].floorRequestList, 1)
+
+	battery.assignElevator(36, "up")
+
+}
+
+func senario3() {
+	battery := Battery{
+		ID:                         1,
+		status:                     "online",
+		amountOfColumns:            4,
+		amountOfFloors:             60,
+		amountOfBasements:          6,
+		amountOfElevatorsPerColumn: 5,
+		columnsList:                []Column{},
+		FloorRequestList:           []FloorRequestButton{},
+	}
+	battery.createFloorRequestbutton()
+	battery.createColumns()
+
+	battery.columnsList[3].elevatorsList[0].currentFloor = 58
+	battery.columnsList[3].elevatorsList[0].status = "move"
+	battery.columnsList[3].elevatorsList[0].direction = "down"
+	battery.columnsList[3].elevatorsList[0].floorRequestList = append(battery.columnsList[3].elevatorsList[0].floorRequestList, 1)
+	battery.columnsList[3].elevatorsList[1].currentFloor = 50
+	battery.columnsList[3].elevatorsList[1].status = "moving"
+	battery.columnsList[3].elevatorsList[1].direction = "up"
+	battery.columnsList[3].elevatorsList[1].floorRequestList = append(battery.columnsList[3].elevatorsList[1].floorRequestList, 60)
+	battery.columnsList[3].elevatorsList[2].currentFloor = 46
+	battery.columnsList[3].elevatorsList[2].status = "moving"
+	battery.columnsList[3].elevatorsList[2].direction = "up"
+	battery.columnsList[3].elevatorsList[2].floorRequestList = append(battery.columnsList[3].elevatorsList[2].floorRequestList, 58)
+	battery.columnsList[3].elevatorsList[3].currentFloor = 1
+	battery.columnsList[3].elevatorsList[3].status = "moving"
+	battery.columnsList[3].elevatorsList[3].direction = "up"
+	battery.columnsList[3].elevatorsList[3].floorRequestList = append(battery.columnsList[3].elevatorsList[3].floorRequestList, 54)
+	battery.columnsList[3].elevatorsList[4].currentFloor = 60
+	battery.columnsList[3].elevatorsList[4].status = "moving"
+	battery.columnsList[3].elevatorsList[4].direction = "down"
+	battery.columnsList[3].elevatorsList[4].floorRequestList = append(battery.columnsList[3].elevatorsList[4].floorRequestList, 1)
+
+	battery.columnsList[3].requestElevator(51, "down")
+
+}
+
+func senario4() {
+	battery := Battery{
+		ID:                         1,
+		status:                     "online",
+		amountOfColumns:            4,
+		amountOfFloors:             60,
+		amountOfBasements:          6,
+		amountOfElevatorsPerColumn: 5,
+		columnsList:                []Column{},
+		FloorRequestList:           []FloorRequestButton{},
+	}
+	battery.createFloorRequestbutton()
+	battery.createColumns()
+
+	battery.columnsList[0].elevatorsList[0].currentFloor = -4
+	battery.columnsList[0].elevatorsList[0].status = "idle"
+	battery.columnsList[0].elevatorsList[1].currentFloor = 1
+	battery.columnsList[0].elevatorsList[1].status = "idle"
+	battery.columnsList[0].elevatorsList[2].currentFloor = -3
+	battery.columnsList[0].elevatorsList[2].status = "moving"
+	battery.columnsList[0].elevatorsList[2].direction = "down"
+	battery.columnsList[0].elevatorsList[2].floorRequestList = append(battery.columnsList[0].elevatorsList[2].floorRequestList, -5)
+	battery.columnsList[0].elevatorsList[3].currentFloor = -6
+	battery.columnsList[0].elevatorsList[3].status = "moving"
+	battery.columnsList[0].elevatorsList[3].direction = "up"
+	battery.columnsList[0].elevatorsList[3].floorRequestList = append(battery.columnsList[0].elevatorsList[3].floorRequestList, 1)
+	battery.columnsList[0].elevatorsList[4].currentFloor = -1
+	battery.columnsList[0].elevatorsList[4].status = "moving"
+	battery.columnsList[0].elevatorsList[4].direction = "down"
+	battery.columnsList[0].elevatorsList[4].floorRequestList = append(battery.columnsList[0].elevatorsList[4].floorRequestList, -6)
+
+	battery.columnsList[0].requestElevator(-3, "up")
 
 }
 
 func main() {
-	fmt.Println("Hello, World!")
-	senario1()
+
+	senario4()
 
 }
 
@@ -268,6 +381,7 @@ func (c Column) findElevator(requestedFloor int, requestedDirection string) Elev
 	if requestedFloor == 1 {
 
 		for _, elevator := range c.elevatorsList {
+			fmt.Println(elevator.ID, "checking the id of the elevator")
 			//The elevator is at my floor and going in the direction I want
 			if requestedFloor == elevator.currentFloor && elevator.status == "idle" {
 				bestElevator, bestScore, referenceGap = checkIfElevatorIsBetter(1, elevator, bestScore, referenceGap, bestElevator, requestedFloor)
@@ -336,27 +450,31 @@ func checkIfElevatorIsBetter(scoreToCheck int, newElevator Elevator, bestScore i
 }
 
 func (e *Elevator) move() {
-	destination := e.floorRequestList[0]
-	e.status = "moving"
 
-	if e.currentFloor < destination {
-		e.direction = "up"
-		for e.currentFloor < destination {
-			fmt.Println("Elevator", e.ID, "is currently at floor", e.currentFloor)
-			e.currentFloor++
+	for len(e.floorRequestList) != 0 {
+		destination := e.floorRequestList[0]
+		e.status = "moving"
+
+		if e.currentFloor < destination {
+			e.direction = "up"
+			for e.currentFloor < destination {
+				fmt.Println("Elevator", e.ID, "is currently at floor", e.currentFloor)
+				e.currentFloor++
+			}
+		} else if e.currentFloor > destination {
+			e.direction = "down"
+			for e.currentFloor > destination {
+				fmt.Println("Elevator", e.ID, "is currently at floor", e.currentFloor)
+				e.currentFloor--
+			}
 		}
-	} else if e.currentFloor > destination {
-		e.direction = "down"
-		for e.currentFloor > destination {
-			fmt.Println("Elevator", e.ID, "is currently at floor", e.currentFloor)
-			e.currentFloor--
-		}
+
+		e.status = "idle"
+		e.direction = "null"
+		e.floorRequestList = e.floorRequestList[1:]
+		fmt.Println("Elevator", e.ID, "stopped on floor", e.currentFloor)
+		e.operateDoors()
 	}
-
-	e.status = "idle"
-	e.direction = "null"
-	e.floorRequestList = e.floorRequestList[1:]
-	fmt.Println("Elevator", e.ID, "stopped on floor", e.currentFloor)
 }
 
 func (e *Elevator) sortFloorList(checkForLobby string) {
@@ -388,9 +506,6 @@ func (c Column) requestElevator(requestedFloor int, direction string) {
 	elevator.sortFloorList(fromLobby)
 	// Make the elevator move to the user
 	elevator.move()
-	// Operate the doors
-	elevator.operateDoors()
-	// Return the chosen elevator to be used by the elevator.requestFloor method
 
 }
 
