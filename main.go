@@ -6,6 +6,10 @@ import (
 	"sort"
 )
 
+func main() {
+
+}
+
 func senario1() {
 	battery := Battery{
 		ID:                         1,
@@ -42,7 +46,6 @@ func senario1() {
 	battery.columnsList[1].elevatorsList[4].floorRequestList = append(battery.columnsList[1].elevatorsList[4].floorRequestList, 1)
 
 	battery.assignElevator(20, "up")
-
 }
 
 func senario2() {
@@ -155,12 +158,6 @@ func senario4() {
 	battery.columnsList[0].elevatorsList[4].floorRequestList = append(battery.columnsList[0].elevatorsList[4].floorRequestList, -6)
 
 	battery.columnsList[0].requestElevator(-3, "up")
-
-}
-
-func main() {
-
-	senario4()
 
 }
 
